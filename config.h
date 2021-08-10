@@ -138,6 +138,7 @@ static Key keys[] = {
 	{ MODKEY,			    XK_d,		    spawn,          SHCMD("dmenu_run") },           //  dmenu for search
 	{ MODKEY,			    XK_q,		    killclient,	    {0} },                          //  kills the current window
 	{ MODKEY,			    XK_semicolon,	shiftview,	    { .i = 1 } },                   //  next tag
+    { MODKEY,   			XK_g,   		shiftview,  	{ .i = -1 } },                  //  prev tag
 	{ MODKEY,			    XK_0,		    view,		    {.ui = ~0 } },                  //  NOT_NEEDED: loads all the tags at once
 	{ MODKEY|ShiftMask,		XK_0,		    tag,		    {.ui = ~0 } },                  //  NOT_NEEDED: sends current window to every tag
 	{ MODKEY,   			XK_equal,   	spawn,  		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },  // vol increase
