@@ -239,7 +239,7 @@ static Key keys[] = {
 	{ MODKEY,   		        	XK_s,          spawn,  		           SHCMD(TERMINAL " slack") },     //  terminal based file-manager
 	{ MODKEY|ShiftMask,	        	XK_s,          spawn,  		           SHCMD(TERMINAL " signal-desktop") },     //  terminal based file-manager
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
-	{ MODKEY,              			XK_f,          togglefullscr,          {0} },                          //  goes full screen
+	{ MODKEY,                       XK_f,          togglefullscreen,       {0} },
 	{ MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },
 	{ MODKEY,                       XK_o,          incnmaster,             {.i = +1 } },

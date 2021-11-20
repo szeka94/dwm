@@ -12,6 +12,7 @@
 #include "movestack.c"
 #include "pertag.c"
 #include "shiftviewclients.c"
+#include "togglefullscreen.c"
 #include "vanitygaps.c"
 /* Layouts */
 #include "layout_facts.c"
