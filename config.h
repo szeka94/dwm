@@ -139,11 +139,6 @@ static Key keys[] = {
 	{ MODKEY,			    XK_q,		    killclient,	    {0} },                          //  kills the current window
 	{ MODKEY,			    XK_semicolon,	shiftview,	    { .i = 1 } },                   //  next tag
     { MODKEY,   			XK_g,   		shiftview,  	{ .i = -1 } },                  //  prev tag
-	{ MODKEY|ShiftMask,		XK_Left,	    tagmon, 		{.i = -1 } },
-	{ MODKEY|ShiftMask,		XK_Right,	    tagmon,	    	{.i = +1 } },
-	{ MODKEY,			    XK_Right,	    focusmon,	    {.i = +1 } },
-	{ MODKEY,			    XK_Left,    	focusmon,	    {.i = -1 } },
-	// { MODKEY|ShiftMask,	    XK_semicolon,	shiftview,	    { .i = 1 } },                   go to the next screen
 	{ MODKEY,			    XK_0,		    view,		    {.ui = ~0 } },                  //  NOT_NEEDED: loads all the tags at once
 	{ MODKEY|ShiftMask,		XK_0,		    tag,		    {.ui = ~0 } },                  //  NOT_NEEDED: sends current window to every tag
 	{ MODKEY,   			XK_equal,   	spawn,  		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },  // vol increase
@@ -246,6 +241,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") },
 	{ MODKEY,			XK_period,	spawn,		SHCMD("mpc next") },
 	{ MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") },
+	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
+	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
+	{ MODKEY,			XK_Right,	focusmon,	{.i = +1 } },
+	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = +1 } },
     // MOVES the current window to next tag TODO: reuse it later
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
