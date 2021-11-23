@@ -1,11 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx       = 3;   /* border pixel of windows */
+static const unsigned int borderpx       = 2;   /* border pixel of windows */
 static const unsigned int snap           = 32;  /* snap pixel */
 static const unsigned int gappih         = 20;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappiv         = 40;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 30;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const int showbar                 = 1;   /* 0 means no bar */
@@ -28,7 +28,7 @@ static char normfloatcolor[]             = "#db8fd9";
 
 static char selfgcolor[]                 = "#eeeeee";
 static char selbgcolor[]                 = "#005577";
-static char selbordercolor[]             = "#005577";
+static char selbordercolor[]             = "#8c2323";
 static char selfloatcolor[]              = "#005577";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
@@ -232,11 +232,11 @@ static Key keys[] = {
 	/* modifier                     key            function                argument */
 	{ MODKEY,                       XK_d,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
-	{ MODKEY,       			    XK_semicolon,	shiftviewclients,	    { .i = 1 } },                   //  next tag
-    { MODKEY,   	        		XK_g,   		shiftviewclients,  	{ .i = -1 } },                  //  prev tag
+	{ MODKEY,       			    XK_semicolon,  shiftviewclients,	   { .i = 1 } },                   //  next tag
+    { MODKEY,   	        		XK_g,   	   shiftviewclients,       { .i = -1 } },                  //  prev tag
 	{ MODKEY,              			XK_w,   	   spawn,                  SHCMD("eval $BROWSER") },       //  brings up the browser, env-var needs to be set 
 	{ MODKEY,   		        	XK_r,          spawn,  		           SHCMD(TERMINAL " -e lf") },     //  terminal based file-manager
-	{ MODKEY,   		        	XK_s,          spawn,  		           SHCMD(TERMINAL " slack") },     //  terminal based file-manager
+	{ MODKEY,   		        	XK_s,          spawn,  		           SHCMD(TERMINAL " slack") },     //  slack
 	{ MODKEY|ShiftMask,	        	XK_s,          spawn,  		           SHCMD(TERMINAL " signal-desktop") },     //  terminal based file-manager
 	{ MODKEY,                       XK_b,          togglebar,              {0} },
 	{ MODKEY,                       XK_f,          togglefullscreen,       {0} },
